@@ -24,4 +24,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+//Essa linha vai atribuir automaticamente a página Index do Swagger
+app.MapGet("/", () => Results.Redirect("/swagger"));
+
 app.Run();
